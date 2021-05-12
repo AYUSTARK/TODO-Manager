@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackgroundDark"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/AppNameHeading"
+        android:textColor="@color/headingTextColor"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:autofillHints=""
+        android:background="@color/textBoxBackgroundColor"
+        android:ems="10"
+        android:hint="@string/note_title"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/headingTextColor"
+        android:textColorHint="@color/headingTextColor"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/noteDescription"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="7dp"
+        android:autofillHints=""
+        android:background="@color/textBoxBackgroundColor"
+        android:ems="10"
+        android:gravity="top|start"
+        android:hint="@string/add_text"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:text=""
+        android:textColor="@color/headingTextColor"
+        android:textColorHint="@color/headingTextColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/noteDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textBoxBackgroundColor"
+        android:textColor="@color/headingTextColor"
+        android:drawablePadding="20dp"
+        android:padding="10dp"
+        android:ems="10"
+        android:layout_margin="7dp"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic_calendar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/saveOrUpdateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:onClick="saveOrUpdate"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/clearAllBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:onClick="clearAllOrDelete"
+            android:text="Clear All" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TODO Manager</string>
+    <string name="note_title">Note Title..</string>
+    <string name="add_text">Add Description..</string>
+    <string name="AppNameHeading">My Notes</string>
+    <string name="expected_date">Expected Date</string>
+</resources>
