@@ -141,6 +141,7 @@ class MainActivity : AppCompatActivity() {
                     .setContentTitle("TODO")
                     .setContentText("${note.title} is due")
                     .setAutoCancel(true)
+                    .setOngoing(true)
                     .setPriority(NotificationManager.IMPORTANCE_HIGH)
                     .setContentIntent(pendingIntent)
                     .addExtras(bundle)
